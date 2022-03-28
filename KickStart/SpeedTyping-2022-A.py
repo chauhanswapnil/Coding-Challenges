@@ -1,6 +1,5 @@
 '''
-0 -> I, I newStr-> I
-1 -> C=1
+Google Kickstart 2022 Round - B
 https://codingcompetitions.withgoogle.com/kickstart/round/00000000008cb33e/00000000009e7021
 '''
 def speedtyping(I,P):
