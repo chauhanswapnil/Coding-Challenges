@@ -15,6 +15,7 @@ For each possible combination get all its 5 length or more substrings check if i
 '''
 
 import itertools
+
 # Brute Force Approach
 def palindrome_free_strings_brute(N,S):
     ques_index = []
@@ -145,3 +146,9 @@ for case in range(1, num_cases + 1):
     S = input()
     ans = "POSSIBLE" if palindrome_free_strings(int(N),S) else "IMPOSSIBLE"
     print('Case #{}: {}'.format(case, ans))
+    
+
+from Measure import measure
+
+measure(palindrome_free_strings_brute,9, "100???001")
+measure(palindrome_free_strings,9, "100???001")
