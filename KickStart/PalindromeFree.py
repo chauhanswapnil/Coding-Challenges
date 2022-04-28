@@ -50,13 +50,13 @@ def checkPalindromeBrute(S):
         j-=1
     return True
 
-# Taking Input
-num_cases = int(input())
-for case in range(1, num_cases + 1):
-    N = input()
-    S = input()
-    ans = "POSSIBLE" if palindrome_free_strings_brute(N,S) else "IMPOSSIBLE"
-    print('Case #{}: {}'.format(case, ans))
+# # Taking Input
+# num_cases = int(input())
+# for case in range(1, num_cases + 1):
+#     N = input()
+#     S = input()
+#     ans = "POSSIBLE" if palindrome_free_strings_brute(N,S) else "IMPOSSIBLE"
+#     print('Case #{}: {}'.format(case, ans))
     
     
     
@@ -140,15 +140,15 @@ def checkPalindrome(S):
         j-=1
     return True
 
-num_cases = int(input())
-for case in range(1, num_cases + 1):
-    N = input()
-    S = input()
-    ans = "POSSIBLE" if palindrome_free_strings(int(N),S) else "IMPOSSIBLE"
-    print('Case #{}: {}'.format(case, ans))
+# num_cases = int(input())
+# for case in range(1, num_cases + 1):
+#     N = input()
+#     S = input()
+#     ans = "POSSIBLE" if palindrome_free_strings(int(N),S) else "IMPOSSIBLE"
+#     print('Case #{}: {}'.format(case, ans))
     
 
 from Measure import measure
 
-measure(palindrome_free_strings_brute,9, "100???001")
-measure(palindrome_free_strings,9, "100???001")
+# measure(palindrome_free_strings_brute,33, "100??????00110101011010??????????")
+measure(palindrome_free_strings,33, "100??????00110101011010??????????")

@@ -7,5 +7,3 @@ def maxSubArray(nums):
         maxSum = max(currSum,maxSum)
         
     return maxSum
-    
-            
