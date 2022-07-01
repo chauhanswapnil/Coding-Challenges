@@ -1,27 +1,18 @@
-from typing import List
-
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        a,b = newInterval
-        start = -1
-        end = -1
-        arr = []
-        for interval in intervals:
-            s, e = interval
-            if (b > e):
-                arr.append(interval)
-            if a >= s and a<=e:
-                start = s
-            elif start != -1 and end == -1 and e < b:
-                if s > b:
-                    end = b
-                if s < b:
-                    end = e
-                arr.append([start,end])
-                # arr.append(interval)
-            # else:
-            #     arr.append(interval)
-        return arr
+        res = []
+        
+        for i in range(len(intervals)):
+            if newInterval[1] < intervals[i][0]:
+                res.append(newInterval)
+                return res + intervals[i:]
+            elif newInterval[0] > intervals[i][1]:
+                res.append(intervals[i])
+            else:
+                newInterval = [min(newInterval[0], intervals[i][0]), max(newInterval[1], intervals[i][1])]
+        
+        res.append(newInterval)
+        return res
 
 o = Solution()
 

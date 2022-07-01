@@ -7,4 +7,3 @@ def maxProfit(prices):
         if prices[i] < buy:
             buy = prices[i]
     return profit
-        

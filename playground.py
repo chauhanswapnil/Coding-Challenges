@@ -80,41 +80,71 @@
 # print(Sum)
 
 # 1 1 2 3 5 8 11 .....
-def printFibonacciNumbers():
-    prev = 1
-    curr = 1
-    k = 1
-    sumFib = 0
-    while (k != 1000):
-        temp = curr
-        curr = prev + curr
-        prev = temp
-        if curr % 2 == 0:
-            sumFib+=curr
-            k+=1
-    print(sumFib)
-# Driven code
-printFibonacciNumbers()
+# def printFibonacciNumbers():
+#     prev = 1
+#     curr = 1
+#     k = 1
+#     sumFib = 0
+#     while (k != 1000):
+#         temp = curr
+#         curr = prev + curr
+#         prev = temp
+#         if curr % 2 == 0:
+#             sumFib+=curr
+#             k+=1
+#     print(sumFib)
+# # Driven code
+# printFibonacciNumbers()
+
+# from itertools import combinations
+# def solution(pattern, s):
+#     c = 0
+#     allSubStrs = [s[a:b] for a,b in combinations(range(len(s) + 1),r=2) if len(s[a:b]) == len(pattern)]
+    
+#     for value in allSubStrs:
+#         flag = 0
+#         for i in range(0,len(pattern)):
+#             if (pattern[i] == "0" and 
+#             (value[i] != "a" and 
+#             value[i] != "e" and 
+#             value[i] != "i" and 
+#             value[i] != "o" and 
+#             value[i] != "u" and 
+#             value[i] != "y")):
+#                 flag = 1
+            
+#             elif (pattern[i] == "1" and 
+#             (value[i] == "a" and 
+#             value[i] == "e" and 
+#             value[i] == "i" and 
+#             value[i] == "o" and 
+#             value[i] == "u" and 
+#             value[i] == "y")):
+#                 flag = 1
+#             if flag == 0:
+#                 c+=1
+#     return c
+             
 
 
 # from itertools import combinations
 
 # def solution(pattern, s):
     
-#     count = 0
-#     substrs = [s[x:y] for x, y in combinations(range(len(s) + 1), r = 2) if len(s[x:y]) == len(pattern) ]
+#     c = 0
+#     allSubStrs = [s[a:b] for a, b in combinations(range(len(s) + 1), r = 2) if len(s[a:b]) == len(pattern)]
 
-#     for val in substrs:
+#     for value in allSubStrs:
 #         flag = 0
 #         for i in range(0,len(pattern)):
-#             if pattern[i] == "0" and (val[i] != "a" and val[i] != "e" and val[i] != "i" and val[i] != "o" and val[i] != "u"):
+#             if pattern[i] == "0" and (value[i] != "a" and value[i] != "e" and value[i] != "i" and value[i] != "o" and value[i] != "u" and value[i] != "y"):
 #                 flag = 1
-#             elif pattern[i] == "1" and (val[i] == "a" or val[i] == "e" or val[i] == "i" or val[i] == "o" or val[i] == "u"):
+#             elif pattern[i] == "1" and (value[i] == "a" or value[i] == "e" or value[i] == "i" or value[i] == "o" or value[i] == "u" and value[i] == "y"):
 #                 flag = 1
 #         if flag == 0:
-#             count+=1
+#             c+=1
     
-#     return count
+#     return c
     
 # print(solution("1","xurjzrtjjicjkddqfvjjcqywlvznduzlfeinpjomrikwnjzrvkdqyrokxulxiunlppisblfgsvbflneifnwlnvfbcirzsbtnwzovoewlpmvlzwhwobshjjrhhjqovlayrxwuqaqwepmvmjanlfjdjtidyqjmpyqdtllicpcshghjltamcselirfhutmnahogqjthdfqcnztugpsebqnfkrywlashzipufskmrjwuhuqwotieuaugxdtedxmqsllpsubmhonrvgefvrnlnqhzknsvainapzacmtuidnhozdhksvxikohgyagjykgbyhzpzcgvgyikafavkkhtfylqcesiwcthqsobwbnzzsmrvliajtkxccyqbnxduzrfwnvnlyomczhcfovicyflmmicogsvmcghbsazyvlcquijjrleicaqadgnmpnjekphemjvbdbdbhpuibduacfecqnjsfuibdiygkvtcppyvwwfsjyzsyexgbudqyxgerkftlfjbsjayhwpuxrzdpumhrlpwvtlxacbdjbxvjedpfxmcmeigkytvwqgyyqklzuilphaesbtlqjoycuxcuzsdqcxagxqkyhphkxbbplpyoxtzkvuwkoolvyqzzxtinovgskstkvxmerjfgpvxxrqibgoavfczqdrikfxhagwefyshaypbqafbgqonhvbuqcdppxyperzesptxrpzrzdjelyrtkkkblhxcoigmbllswiefhhejiamzifznkojwbfpbuzneoqfdjtcuqrakvcfiolzcthjtqnvchdwkrnpongqnajkugccnolukpxmhvjjgbmsuajghwizyfttilddqjdseposcaxnmhvavdihqtsrrmafcpfrmwiublyqysthhvxskelqknosksttsktadqyuqfjaqbbjrarxpvbrhppkdeklqzzhwkrauqlyredxjwizeeatpgwzkeuikcpxlsirhvwwtgzchnxoxotfpycd"))
 
