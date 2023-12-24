@@ -7,12 +7,8 @@ def stable_mex(n,a):
     mex = smallestNonNegative(a)
     maxx = max(a)
     count = 0
-    
     # if mex == 0:
     #     return 1
-    
-    
-    
     for k in range(1,maxx):
         arr = []
         for i in a:
